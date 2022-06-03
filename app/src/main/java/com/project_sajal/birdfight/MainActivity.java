@@ -30,12 +30,10 @@ public class MainActivity extends AppCompatActivity {
             if (player == 1) {
                 v.setImageResource(R.drawable.bird2);
                 gameState[tag] = 1;
-                Toast.makeText(this, "Pos: " + tag + " RED", Toast.LENGTH_SHORT).show();
                 player = 0;
             } else if (player == 0) {
                 v.setImageResource(R.drawable.bird1);
                 gameState[tag] = 0;
-                Toast.makeText(this, "Pos: " + tag  + " CHUCK", Toast.LENGTH_SHORT).show();
                 player = 1;
             }
 
@@ -47,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
                                 .setIcon(R.drawable.bird2)
                                 .setTitle("RED won the game")
                                 .setMessage("Nice Try by Chuck")
-                                .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                                .setNeutralButton("Continue", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-                                        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Start The Game", Toast.LENGTH_SHORT).show();
                                     }
                                 }).show();
                     } else {
@@ -58,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                                 .setIcon(R.drawable.bird1)
                                 .setTitle("CHUCK won the game")
                                 .setMessage("Nice Try by Red")
-                                .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                                .setNeutralButton("Continue", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
 //                                        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show();
