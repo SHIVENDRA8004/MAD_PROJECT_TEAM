@@ -40,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < winningStates.length; i++) {
                 if (gameState[winningStates[i][0]] != -1 && gameState[winningStates[i][0]] == gameState[winningStates[i][1]] && gameState[winningStates[i][1]] == gameState[winningStates[i][2]]) {
                     iswinner = true;
+                    if (gameState[winningStates[i][0]] == 1) {
+                        new AlertDialog.Builder( this)
+                                .setIcon(R.drawable.bird2)
+                                .setTitle("RED won the game")
+                                .setMessage("Nice Try by Chuck")
+                                .setNeutralButton("Continue", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        Toast.makeText(getApplicationContext(), "Start The Game", Toast.LENGTH_SHORT).show();
+                                    }
+                                }).show();
+                        
 
     public void restart(View view) {
         GridLayout gridLayout = findViewById(R.id.gridLayout);
