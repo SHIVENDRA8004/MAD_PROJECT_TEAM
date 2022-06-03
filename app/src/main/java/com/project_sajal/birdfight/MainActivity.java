@@ -68,7 +68,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    
+    public void restart(View view) {
+        GridLayout gridLayout = findViewById(R.id.gridLayout);
+        int tot_images = gridLayout.getChildCount();
+        for (int i = 0; i < tot_images; i++) {
+            ImageView v = (ImageView) gridLayout.getChildAt(i);
+            v.setImageDrawable(null);
+        }
+        
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
