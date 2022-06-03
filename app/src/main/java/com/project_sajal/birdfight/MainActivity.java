@@ -31,7 +31,15 @@ public class MainActivity extends AppCompatActivity {
                 v.setImageResource(R.drawable.bird2);
                 gameState[tag] = 1;
                 player = 0;
-                
+            } else if (player == 0) {
+                v.setImageResource(R.drawable.bird1);
+                gameState[tag] = 0;
+                player = 1;
+            }
+
+            for (int i = 0; i < winningStates.length; i++) {
+                if (gameState[winningStates[i][0]] != -1 && gameState[winningStates[i][0]] == gameState[winningStates[i][1]] && gameState[winningStates[i][1]] == gameState[winningStates[i][2]]) {
+                    iswinner = true;
 
     public void restart(View view) {
         GridLayout gridLayout = findViewById(R.id.gridLayout);
