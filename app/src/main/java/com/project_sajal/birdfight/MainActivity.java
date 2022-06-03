@@ -51,7 +51,22 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(), "Start The Game", Toast.LENGTH_SHORT).show();
                                     }
                                 }).show();
-                        
+                    } else {
+                        new AlertDialog.Builder( this)
+                                .setIcon(R.drawable.bird1)
+                                .setTitle("CHUCK won the game")
+                                .setMessage("Nice Try by Red")
+                                .setNeutralButton("Continue", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+//                                        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show();
+                                    }
+                                }).show();
+                    }
+                }
+            }
+        }
+    }
 
     public void restart(View view) {
         GridLayout gridLayout = findViewById(R.id.gridLayout);
