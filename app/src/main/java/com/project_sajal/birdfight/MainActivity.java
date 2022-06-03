@@ -68,20 +68,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void restart(View view) {
-        GridLayout gridLayout = findViewById(R.id.gridLayout);
-        int tot_images = gridLayout.getChildCount();
-        for (int i = 0; i < tot_images; i++) {
-            ImageView v = (ImageView) gridLayout.getChildAt(i);
-            v.setImageDrawable(null);
-        }
-        iswinner = false;
-        image_clicked = -1;
-        for (int i = 0; i < gameState.length; i++) {
-            gameState[i] = -1;
-        }
-        player = 1;
-    }
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
