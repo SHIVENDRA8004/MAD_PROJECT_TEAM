@@ -43,11 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 if (gameState[winningStates[i][0]] != -1 && gameState[winningStates[i][0]] == gameState[winningStates[i][1]] && gameState[winningStates[i][1]] == gameState[winningStates[i][2]]) {
                     iswinner = true;
                     if (gameState[winningStates[i][0]] == 1) {
-//                        Toast.makeText(this, "RED won the game", Toast.LENGTH_LONG).show();
                         new AlertDialog.Builder( this)
                                 .setIcon(R.drawable.bird2)
-                                .setTitle("Be Alert")
-                                .setMessage("Follow Social Distancing!!")
+                                .setTitle("RED won the game")
+                                .setMessage("Nice Try by Chuck")
                                 .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -55,15 +54,14 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 }).show();
                     } else {
-                        Toast.makeText(this, "CHUCK won the game", Toast.LENGTH_LONG).show();
                         new AlertDialog.Builder( this)
                                 .setIcon(R.drawable.bird1)
-                                .setTitle("Be Alert")
-                                .setMessage("Follow Social Distancing!!")
+                                .setTitle("CHUCK won the game")
+                                .setMessage("Nice Try by Red")
                                 .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-                                        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show();
+//                                        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show();
                                     }
                                 }).show();
                     }
