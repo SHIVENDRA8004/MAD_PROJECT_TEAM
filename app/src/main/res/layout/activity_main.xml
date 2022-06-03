@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back1"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="337dp"
+        android:layout_height="338dp"
+        android:background="@drawable/box"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="load"
+            android:tag="1"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:onClick="load"
+            android:tag="8"
+            app:layout_column="2"
+            app:layout_row="2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:onClick="load"
+            android:tag="7"
+            app:layout_column="1"
+            app:layout_row="2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="25dp"
+            android:onClick="load"
+            android:tag="6"
+            app:layout_column="0"
+            app:layout_row="2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="19dp"
+            android:onClick="load"
+            android:tag="5"
+            app:layout_column="2"
+            app:layout_row="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="19dp"
+            android:onClick="load"
+            android:tag="3"
+            app:layout_column="0"
+            app:layout_row="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="12dp"
+            android:onClick="load"
+            android:tag="2"
+            app:layout_column="2"
+            app:layout_row="0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="19dp"
+            android:onClick="load"
+            android:tag="4"
+            app:layout_column="1"
+            app:layout_row="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="94dp"
+            android:layout_height="91dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="12dp"
+            android:onClick="load"
+            android:tag="0"
+            app:layout_column="0"
+            app:layout_row="0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="332dp"
+        android:layout_height="66dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:shadowColor="#DF4000"
+        android:text="BIRD FIGHT"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.561" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:backgroundTint="@color/teal_700"
+        android:backgroundTintMode="add"
+        android:onClick="restart"
+        android:text="Restart"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/black"
+        app:backgroundTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.241"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
