@@ -22,7 +22,16 @@ public class MainActivity extends AppCompatActivity {
     int[][] winningStates = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}};
     int[] gameState = {-1, -1, -1, -1, -1, -1, -1, -1, -1};
 
-    
+    public void load(View view) {
+        ImageView v = (ImageView) view;
+        int tag = Integer.parseInt(v.getTag().toString());
+        image_clicked = gameState[tag];
+        if (iswinner == false && image_clicked == -1) {
+            if (player == 1) {
+                v.setImageResource(R.drawable.bird2);
+                gameState[tag] = 1;
+                player = 0;
+                
 
     public void restart(View view) {
         GridLayout gridLayout = findViewById(R.id.gridLayout);
