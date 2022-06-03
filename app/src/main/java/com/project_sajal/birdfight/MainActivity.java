@@ -1,9 +1,12 @@
 package com.project_sajal.birdfight;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.gridlayout.widget.GridLayout;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -40,9 +43,29 @@ public class MainActivity extends AppCompatActivity {
                 if (gameState[winningStates[i][0]] != -1 && gameState[winningStates[i][0]] == gameState[winningStates[i][1]] && gameState[winningStates[i][1]] == gameState[winningStates[i][2]]) {
                     iswinner = true;
                     if (gameState[winningStates[i][0]] == 1) {
-                        Toast.makeText(this, "RED won the game", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(this, "RED won the game", Toast.LENGTH_LONG).show();
+                        new AlertDialog.Builder( this)
+                                .setIcon(R.drawable.bird2)
+                                .setTitle("Be Alert")
+                                .setMessage("Follow Social Distancing!!")
+                                .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show();
+                                    }
+                                }).show();
                     } else {
                         Toast.makeText(this, "CHUCK won the game", Toast.LENGTH_LONG).show();
+                        new AlertDialog.Builder( this)
+                                .setIcon(R.drawable.bird1)
+                                .setTitle("Be Alert")
+                                .setMessage("Follow Social Distancing!!")
+                                .setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT).show();
+                                    }
+                                }).show();
                     }
                 }
             }
